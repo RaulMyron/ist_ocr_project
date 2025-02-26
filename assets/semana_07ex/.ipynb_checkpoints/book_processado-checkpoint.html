@@ -1,0 +1,325 @@
+
+        <!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Documento Processado</title>
+            
+            <!-- MathJax Config -->
+            <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['$', '$']],
+                    displayMath: [['$$', '$$']],
+                    processEscapes: true
+                },
+                svg: {
+                    fontCache: 'global'
+                }
+            };
+            </script>
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+            
+            <style>
+                :root {
+                    --text-color: #333;
+                    --bg-color: #fff;
+                    --content-bg: #ffffff;
+                    --equation-bg: #f8f9fa;
+                    --line-height: 1.6;
+                    --font-size: 16px;
+                }
+                
+                body {
+                    font-family: Arial, sans-serif;
+                    line-height: var(--line-height);
+                    font-size: var(--font-size);
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: var(--bg-color);
+                    color: var(--text-color);
+                }
+                
+                .content {
+                    background-color: var(--content-bg);
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    margin-bottom: 80px; /* Espaço para o menu de acessibilidade */
+                }
+                
+                .equation {
+                    margin: 1em 0;
+                    padding: 1em;
+                    background: var(--equation-bg);
+                    border-radius: 8px;
+                    overflow-x: auto;
+                }
+                
+                .page-header {
+                    background-color: #e3f2fd;
+                    padding: 10px;
+                    margin: 30px 0 10px 0;
+                    border-radius: 5px;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 18px;
+                    border-bottom: 2px solid #2196F3;
+                }
+                
+                .page-footer {
+                    border-bottom: 1px dashed #ccc;
+                    margin: 20px 0;
+                    padding-bottom: 10px;
+                }
+                
+                .index {
+                    background-color: #f5f5f5;
+                    padding: 15px;
+                    border-radius: 8px;
+                    margin-bottom: 30px;
+                }
+                
+                .index h2 {
+                    margin-top: 0;
+                    color: #2196F3;
+                }
+                
+                .index-links {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                }
+                
+                .index-link {
+                    display: inline-block;
+                    padding: 5px 10px;
+                    background: #e3f2fd;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    color: #0056b3;
+                }
+                
+                .index-link:hover {
+                    background: #bbdefb;
+                }
+                
+                .accessibility-controls {
+                    position: fixed;
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: var(--content-bg);
+                    padding: 10px;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 5px;
+                    z-index: 1000;
+                    max-width: 320px; /* Tamanho fixo */
+                    width: auto;
+                }
+                
+                button {
+                    padding: 6px 12px;
+                    border: none;
+                    border-radius: 4px;
+                    background: #007bff;
+                    color: white;
+                    cursor: pointer;
+                    transition: background 0.3s;
+                    font-size: 14px;
+                }
+                
+                button:hover {
+                    background: #0056b3;
+                }
+                
+                /* Temas */
+                body.dark-mode {
+                    --text-color: #e0e0e0;
+                    --bg-color: #1a1a1a;
+                    --content-bg: #2d2d2d;
+                    --equation-bg: #363636;
+                }
+                
+                body.high-contrast {
+                    --text-color: #fff;
+                    --bg-color: #000;
+                    --content-bg: #000;
+                    --equation-bg: #333;
+                }
+                
+                /* Para acomodar o feedback de usuários com deficiência visual */
+                @media (min-width: 769px) {
+                    .accessibility-controls {
+                        /* Tamanho fixo, não aumenta com zoom */
+                        transform: translateX(-50%) scale(1);
+                        transform-origin: center;
+                    }
+                }
+                
+                @media (max-width: 768px) {
+                    .accessibility-controls {
+                        max-width: 260px;
+                        /* Tamanho fixo para mobile */
+                        transform: translateX(-50%) scale(1);
+                        transform-origin: center;
+                    }
+                    
+                    button {
+                        font-size: 12px;
+                        padding: 4px 8px;
+                    }
+                }
+                
+                #progress-bar {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    height: 5px;
+                    background-color: #2196F3;
+                    z-index: 1001;
+                }
+                
+                .top-link {
+                    display: inline-block;
+                    position: fixed;
+                    bottom: 70px;
+                    right: 20px;
+                    background: #2196F3;
+                    color: white;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 40px;
+                    font-size: 20px;
+                    text-decoration: none;
+                    opacity: 0.7;
+                    transition: opacity 0.3s;
+                }
+                
+                .top-link:hover {
+                    opacity: 1;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>Documento Processado</h1>
+                <div id="progress-bar" style="width: 0.18%;"></div>
+                <p><strong>Progresso:</strong> 1/553 páginas processadas (0.18%)</p>
+            </header>
+            
+            <div class="index">
+                <h2>Índice de Páginas</h2>
+                <div class="index-links">
+                    <a href="#page-1" class="index-link">Página 1</a>
+
+                </div>
+            </div>
+            
+            <main role="main" class="content">
+                
+        <div class="page-header" id="page-1">Página 1 de 553</div>
+        <div class="page-content" data-page="1">
+            # INGENIERIA # QUIMICA 4. Transmisión del calor E. Costa Novella Con la colaboración de: G. Calleja Pardo G. Ovejero Escudero A. de Lucas Martínez J. Aguado Alonso M. A. Uguina Zamorano Profesores del Departamento de Ingeniería Química de la Facultad de Ciencias Químicas de la Universidad Complutense de Madrid Alhambra There are no mathematical equations in this image.
+        </div>
+        <div class="page-footer"></div>
+        
+            </main>
+            
+            <a href="#top" class="top-link" aria-label="Voltar ao topo">↑</a>
+            
+            <div class="accessibility-controls" aria-label="Controles de acessibilidade">
+                <button onclick="toggleDarkMode()" aria-label="Alternar modo escuro">🌓</button>
+                <button onclick="toggleHighContrast()" aria-label="Alternar alto contraste">👁️</button>
+                <button onclick="increaseFontSize()" aria-label="Aumentar tamanho da fonte">A+</button>
+                <button onclick="decreaseFontSize()" aria-label="Diminuir tamanho da fonte">A-</button>
+                <button onclick="increaseLineHeight()" aria-label="Aumentar espaçamento entre linhas">↕️+</button>
+                <button onclick="decreaseLineHeight()" aria-label="Diminuir espaçamento entre linhas">↕️-</button>
+            </div>
+            
+            <script>
+                // Adiciona links de página ao carregar
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Gera links para navegação rápida
+                    const pageHeaders = document.querySelectorAll('.page-header');
+                    pageHeaders.forEach(header => {
+                        const pageNum = header.getAttribute('id').replace('page-', '');
+                        const pageId = `page-${pageNum}`;
+                        
+                        // Adiciona links no índice se não existirem
+                        if (!document.querySelector(`.index-link[href="#${pageId}"]`)) {
+                            const indexLinks = document.querySelector('.index-links');
+                            if (indexLinks) {
+                                const link = document.createElement('a');
+                                link.href = `#${pageId}`;
+                                link.className = 'index-link';
+                                link.textContent = `Página ${pageNum}`;
+                                indexLinks.appendChild(link);
+                            }
+                        }
+                    });
+                    
+                    // Scroll para a página se vier com hash
+                    if (window.location.hash) {
+                        const targetElement = document.querySelector(window.location.hash);
+                        if (targetElement) {
+                            targetElement.scrollIntoView();
+                        }
+                    }
+                });
+                
+                function toggleDarkMode() {
+                    document.body.classList.toggle('dark-mode');
+                    document.body.classList.remove('high-contrast');
+                    refreshMathJax();
+                }
+                
+                function toggleHighContrast() {
+                    document.body.classList.toggle('high-contrast');
+                    document.body.classList.remove('dark-mode');
+                    refreshMathJax();
+                }
+                
+                let currentFontSize = 16;
+                function increaseFontSize() {
+                    currentFontSize = Math.min(currentFontSize * 1.1, 32);
+                    document.documentElement.style.setProperty('--font-size', currentFontSize + 'px');
+                    refreshMathJax();
+                }
+                
+                function decreaseFontSize() {
+                    currentFontSize = Math.max(currentFontSize * 0.9, 12);
+                    document.documentElement.style.setProperty('--font-size', currentFontSize + 'px');
+                    refreshMathJax();
+                }
+                
+                let currentLineHeight = 1.6;
+                function increaseLineHeight() {
+                    currentLineHeight = Math.min(currentLineHeight * 1.1, 2.5);
+                    document.documentElement.style.setProperty('--line-height', currentLineHeight);
+                }
+                
+                function decreaseLineHeight() {
+                    currentLineHeight = Math.max(currentLineHeight * 0.9, 1.2);
+                    document.documentElement.style.setProperty('--line-height', currentLineHeight);
+                }
+                
+                function refreshMathJax() {
+                    if (typeof MathJax !== 'undefined') {
+                        MathJax.typesetClear();
+                        MathJax.typesetPromise();
+                    }
+                }
+            </script>
+        </body>
+        </html>
+        

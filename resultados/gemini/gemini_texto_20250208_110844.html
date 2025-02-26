@@ -1,0 +1,265 @@
+
+        <!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Texto e Equações - Gemini</title>
+            
+            <!-- MathJax Config -->
+            <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']]
+                },
+                svg: {
+                    fontCache: 'global'
+                }
+            };
+            </script>
+            <script type="text/javascript" id="MathJax-script" async
+                    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+            </script>
+            
+            <style>
+                :root {
+                    --text-color: #333;
+                    --bg-color: #fff;
+                    --secondary-bg: #f8f9fa;
+                }
+                
+                /* Base styles */
+                body {
+                    font-family: system-ui, -apple-system, sans-serif;
+                    line-height: 1.6;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    color: var(--text-color);
+                    background: var(--bg-color);
+                    transition: all 0.3s ease;
+                }
+                
+                /* Content container */
+                .content {
+                    padding: 20px;
+                    background: var(--secondary-bg);
+                    border-radius: 10px;
+                    margin: 20px 0;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                }
+                
+                /* Math display */
+                .math-display {
+                    overflow-x: auto;
+                    padding: 1em;
+                    margin: 1em 0;
+                    background: var(--bg-color);
+                    border-radius: 5px;
+                }
+                
+                /* Dark mode */
+                body.dark-mode {
+                    --text-color: #e0e0e0;
+                    --bg-color: #1a1a1a;
+                    --secondary-bg: #2d2d2d;
+                }
+                
+                /* High contrast */
+                body.high-contrast {
+                    --text-color: #fff;
+                    --bg-color: #000;
+                    --secondary-bg: #222;
+                }
+                
+                /* Accessibility controls */
+                .accessibility-controls {
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    background: var(--secondary-bg);
+                    padding: 15px;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    z-index: 1000;
+                    max-width: 300px;
+                }
+                
+                /* Buttons */
+                button {
+                    padding: 8px 12px;
+                    border: none;
+                    border-radius: 4px;
+                    background: #3498db;
+                    color: white;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    font-size: 14px;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+                
+                button:hover {
+                    background: #2980b9;
+                    transform: translateY(-2px);
+                }
+                
+                button:focus {
+                    outline: 3px solid #74b9ff;
+                    outline-offset: 2px;
+                }
+                
+                /* Responsive design */
+                @media (max-width: 768px) {
+                    .accessibility-controls {
+                        left: 20px;
+                        right: 20px;
+                        max-width: unset;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <main>
+                <h1>Interpretação do Texto</h1>
+                
+                <div class="content" role="region" aria-label="Texto interpretado">
+                    <div id="text-content">
+                        Aqui está a análise da imagem fornecida, extraindo o texto completo, equações matemáticas em LaTeX e verificando as funções trigonométricas:
+
+**1. Texto Completo:**
+
+4) Suponha que \(f\) é derivável e \(g(x) = f^2(\cos x)\). Sabendo que \(f(0) = 1\) e \(f'(0) = -1/2\), calcule \(g'(\pi/2)\).
+
+5) Seja \(g\) uma função derivável e \(f(x) = (\cos x)g^2\left(\tan\left(\frac{x}{x^2+2}\right)\right)\). Sabendo que \(g(0) = 1/2\) e \(g'(0) = 1\), calcule \(f'(0)\).
+
+6) Dado um número \(a > 0\), com \(a \ne 1\), definimos a função exponencial de base \(a\) como sendo \(a^x = e^{x \ln(a)}\). Use a regra da cadeia para calcular a derivada de \(a^x\). Em seguida, compare-a com a derivada da função potência \(x^a\).
+
+7) Sendo \(x = f(y)\) definida implicitamente pela equação \(x^2 - x\sqrt{xy} + 2y^2 = 10\) para \(x > 0\) e \(y > 0\), encontre uma expressão \(m(x, y)\) para o coeficiente angular da reta normal ao gráfico de \(f(y)\), para os pontos onde \(x^{3/2} - 8y^{3/2} \ne 0\).
+
+8) Considere \(y = f(x)\) definida implicitamente por \(x^4 - xy + y^4 = 1\). Calcule \(f'(0)\), sabendo que \(f\) é uma função positiva.
+
+9) Considere a curva cuja equação é \((2 - x)y^2 = x^3\).
+    (a) Obtenha a equação da reta tangente ao gráfico da curva em \((1, 1)\).
+    (b) Obtenha as equações das retas tangentes ao gráfico da curva nos pontos em que \(x = 3/2\).
+
+
+**2. Equações Matemáticas em LaTeX:**
+
+* \(g(x) = f^2(\cos x)\)
+* \(f(x) = (\cos x)g^2\left(\tan\left(\frac{x}{x^2+2}\right)\right)\)
+* \(a^x = e^{x \ln(a)}\)
+* \(x^2 - x\sqrt{xy} + 2y^2 = 10\)
+* \(x^4 - xy + y^4 = 1\)
+* \((2 - x)y^2 = x^3\)
+
+
+**3. Funções Trigonométricas:**
+
+As funções trigonométricas encontradas na imagem são:
+
+* \(\cos x\)
+* \(\tan\left(\frac{x}{x^2+2}\right)\)
+
+Observe que foram mantidas as regras de formatação LaTeX solicitadas, como o uso de `\sin`, `\cos`, `\tan` com espaços após, parênteses e colchetes balanceados e preservação de subscritos e sobrescritos.
+                    </div>
+                </div>
+                
+                <div class="accessibility-controls" role="complementary">
+                    <button onclick="toggleDarkMode()" aria-label="Alternar modo escuro">
+                        🌓 Modo Escuro</button>
+                    <button onclick="toggleHighContrast()" aria-label="Alternar alto contraste">
+                        👁️ Alto Contraste</button>
+                    <button onclick="toggleSpeech()" aria-label="Ler texto" id="speechButton">
+                        🔊 Ler</button>
+                    <button onclick="increaseFontSize()" aria-label="Aumentar fonte">
+                        A+</button>
+                    <button onclick="decreaseFontSize()" aria-label="Diminuir fonte">
+                        A-</button>
+                </div>
+            </main>
+            
+            <script>
+                let isReading = false;
+                const speechUtterance = new SpeechSynthesisUtterance();
+                speechUtterance.lang = 'pt-BR';
+                
+                // Dark mode toggle
+                function toggleDarkMode() {
+                    document.body.classList.toggle('dark-mode');
+                    document.body.classList.remove('high-contrast');
+                    reloadMathJax();
+                }
+                
+                // High contrast toggle
+                function toggleHighContrast() {
+                    document.body.classList.toggle('high-contrast');
+                    document.body.classList.remove('dark-mode');
+                    reloadMathJax();
+                }
+                
+                // Speech synthesis
+                function toggleSpeech() {
+                    if (isReading) {
+                        window.speechSynthesis.cancel();
+                        isReading = false;
+                        document.getElementById('speechButton').innerHTML = '🔊 Ler';
+                    } else {
+                        const text = document.getElementById('text-content').textContent;
+                        speechUtterance.text = text;
+                        
+                        speechUtterance.onend = function() {
+                            isReading = false;
+                            document.getElementById('speechButton').innerHTML = '🔊 Ler';
+                        };
+                        
+                        window.speechSynthesis.speak(speechUtterance);
+                        isReading = true;
+                        document.getElementById('speechButton').innerHTML = '🔊 Parar';
+                    }
+                }
+                
+                // Font size controls
+                let currentFontSize = parseFloat(getComputedStyle(document.body).fontSize);
+                
+                function increaseFontSize() {
+                    currentFontSize = Math.min(currentFontSize * 1.1, 32);
+                    document.body.style.fontSize = currentFontSize + 'px';
+                    reloadMathJax();
+                }
+                
+                function decreaseFontSize() {
+                    currentFontSize = Math.max(currentFontSize * 0.9, 12);
+                    document.body.style.fontSize = currentFontSize + 'px';
+                    reloadMathJax();
+                }
+                
+                // MathJax reload
+                function reloadMathJax() {
+                    if (typeof MathJax !== 'undefined') {
+                        MathJax.typesetClear();
+                        MathJax.typesetPromise();
+                    }
+                }
+                
+                // Keyboard shortcuts
+                document.addEventListener('keydown', (e) => {
+                    if (e.altKey) {
+                        switch(e.key) {
+                            case 'd': toggleDarkMode(); break;
+                            case 'c': toggleHighContrast(); break;
+                            case 's': toggleSpeech(); break;
+                            case '+': increaseFontSize(); break;
+                            case '-': decreaseFontSize(); break;
+                        }
+                    }
+                });
+            </script>
+        </body>
+        </html>
+        

@@ -1,0 +1,90 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Exercícios - Cálculo 1 - Semana 07</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      font-weight: bold;
+    }
+    section {
+      margin-bottom: 2em;
+    }
+    ol, ul {
+      list-style-position: inside;
+      padding-left: 0;
+    }
+    ol > li, ul > li {
+      margin-bottom: 0.5em;
+    }
+    .equation {
+      font-style: italic;
+      display: block;
+      margin-bottom: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cálculo 1</h1>
+  <h2>Lista de Exercícios - Semana 07</h2>
+  <p><strong>Temas abordados:</strong> Regra da cadeia; Derivação Implícita; Derivada de funções inversas</p>
+  <p><strong>Seções do livro:</strong> 3.6, 3.7, 3.8 e 3.9</p>
+
+  <section>
+    <h3>1)</h3>
+    <p>Supondo que y = y(u) e u = u(x), use a regra da cadeia para calcular a derivada dy/dx nos itens abaixo:</p>
+    <ol>
+      <li>(a) y = abra parênteses u² mais 1 fecha parênteses; u = 3x² menos 2x</li>
+      <li>(b) y = raiz quadrada de u; u = 1/(x menos 1)</li>
+      <li>(c) y = abra parênteses u² mais 2u menos 3 fecha parênteses; u = raiz quadrada de x</li>
+      <li>(d) y = u³ mais u; u = 1/raiz quadrada de x</li>
+      <li>(e) y = cos(u); u = x mais x²</li>
+      <li>(f) y = sen(u); u = raiz quadrada de x</li>
+    </ol>
+  </section>
+
+  <section>
+    <h3>2)</h3>
+    <p>Calcule a derivada de cada uma das funções abaixo:</p>
+    <ol>
+      <li>(a) f(x) = cos(x mais x²)</li>
+      <li>(b) f(x) = e elevado a (raiz quadrada de x) vezes ln(raiz quadrada de x)</li>
+      <li>(c) f(x) = sen(abra parênteses (x mais 1)² vezes (x mais 2) fecha parênteses)</li>
+      <li>(d) f(x) = (3x³ mais 4x² menos 4) elevado a (3 dividido por 4)</li>
+      <li>(e) f(x) = arcsen(2x)</li>
+      <li>(f) f(x) = raiz quadrada de x mais raiz quadrada de (2x)</li>
+      <li>(g) f(x) = ln(x vezes raiz quadrada de (x² mais 1))</li>
+      <li>(h) f(x) = (x³ menos 3x²)/((x⁴ mais 1) elevado a (5 dividido por 2))</li>
+      <li>(i) f(x) = arctan(3x² mais 1)</li>
+      <li>(j) f(x) = (e elevado a x) vezes x</li>
+      <li>(k) f(x) = x² vezes e elevado a (-x)</li>
+      <li>(l) f(x) = arccos(1/(x² mais 1))</li>
+    </ol>
+  </section>
+
+  <section>
+    <h3>3)</h3>
+    <p>Se <em>f</em> é uma função derivável e positiva, então (ln <em>f</em>(x))' = <em>f</em>'(x)/<em>f</em>(x). Vamos usar este fato para calcular a derivada da função:</p>
+    <p class="equation"><em>f</em>(x) = (x² vezes raiz quadrada de (7x menos 14))/((1 mais x²) elevado a 4)</p>
+    <p>Tomando o logaritmo nos dois lados, e lembrando que a função logaritmo transforma produtos em soma e potências em produtos, obtemos:</p>
+    <p class="equation">ln(<em>f</em>(x)) = 2ln(x) mais (1 dividido por 3)ln(7x menos 14) menos 4ln(1 mais x²).</p>
+    <p>Derivando, obtemos:</p>
+    <p class="equation">(1 dividido por <em>f</em>(x))<em>f</em>'(x) = 2 dividido por x mais 7 dividido por (3 vezes (7x menos 14)) menos 8x dividido por (1 mais x²).</p>
+    <p>E portanto:</p>
+    <p class="equation"><em>f</em>'(x) = ((x² vezes raiz quadrada de (7x menos 14))/((1 mais x²) elevado a 4)) vezes (2 dividido por x mais 7 dividido por (3 vezes (7x menos 14)) menos 8x dividido por (1 mais x²)).</p>
+    <p>O procedimento acima é chamado de derivação logarítmica. Use-o para derivar as funções abaixo:</p>
+    <ol>
+      <li>(a) <em>f</em>(x) = (x mais 1) elevado a x</li>
+      <li>(b) <em>f</em>(x) = (sen x) elevado a (cos x)</li>
+    </ol>
+  </section>
+
+</body>
+</html>
+```

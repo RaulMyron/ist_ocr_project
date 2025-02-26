@@ -1,0 +1,97 @@
+
+        <!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Conteúdo Técnico</title>
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+            <script id="MathJax-script" async 
+                    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+            </script>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    line-height: 1.6;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                .content {
+                    background-color: #ffffff;
+                    padding: 15px;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                .equation {
+                    margin: 1em 0;
+                    padding: 0.5em;
+                    background: #f8f9fa;
+                    border-radius: 4px;
+                }
+            </style>
+        </head>
+        <body>
+            <main role="main">
+                <article class="content" role="article">
+                    1. Texto completo preservando a formatação:
+
+Universidade de Brasília
+Departamento de Matemática
+Cálculo 1
+Lista de Exercícios – Semana 07
+
+Temas abordados: Regra da cadeia; Derivação Implícita; Derivada de funções inversas
+Seções do livro: 3.6, 3.7, 3.8 e 3.9
+
+1) Supondo que $y = y(u)$ e $u = u(x)$, use a regra da cadeia para calcular a derivada $\frac{dy}{dx}$ nos itens abaixo
+(a) $y = u^2 + 1$; $u = 3x^2 – 2x$
+(c) $y = u^2 + 2u – 3$; $u = \sqrt{x}$
+(e) $y = \cos(u)$; $u = x + x^2$
+
+(b) $y = \sqrt{u}$; $u = \frac{1}{(x − 1)}$
+(d) $y = u^3 + u$; $u = \frac{1}{\sqrt{x}}$
+(f) $y = \sen(u)$; $u = \sqrt{x}$
+
+2) Calcule a derivada de cada uma das funções abaixo. (veja Vídeo 3)
+(a) $f(x) = \cos(x + x^2)$
+(b) $f(x) = e^{\sqrt{x}}\ln(\sqrt{x})$
+(c) $f(x) = \sen((x + 1)^2(x + 2))$
+(d) $f(x) = (3x^3 + 4x^2 – 4)^{3/4}$
+(e) $f(x) = \arcsen(2x)$ (veja Vídeo 2)
+(f) $f(x) = \sqrt{x} + \sqrt{2x}$
+(g) $f(x) = \ln(x\sqrt{x^2 + 1})$
+(h) $f(x) = \frac{x^3 - 3x^2}{(x^4 + 1)^{5/2}}$
+(i) $f(x) = \arctan(3x^2 + 1)$
+(j) $f(x) = (e^x)^x$
+(k) $f(x) = x^2e^{-x}$
+(l) $f(x) = \arccos\left(\frac{1}{x^2 + 1}\right)$
+
+3) Se $f$ é uma função derivável e positiva, então $(\ln f(x))' = \frac{f'(x)}{f(x)}$. Vamos usar este fato para calcular a derivada da função
+$$f(x) = \frac{x^2\sqrt[3]{7x - 14}}{(1 + x^2)^4}.$$
+Tomando o logaritmo nos dois lados, e lembrando que a função logaritmo transforma produtos em soma e potências em produtos, obtemos
+$$\ln(f(x)) = 2\ln(x) + \frac{1}{3}\ln(7x - 14) - 4\ln(1 + x^2).$$
+Derivando, obtemos
+$$\frac{1}{f(x)}f'(x) = \frac{2}{x} + \frac{7/3}{7x - 14} - \frac{8x}{1 + x^2},$$
+e portanto
+$$f'(x) = \frac{x^2\sqrt[3]{7x - 14}}{(1 + x^2)^4}\left(\frac{2}{x} + \frac{7/3}{7x - 14} - \frac{8x}{1 + x^2}\right).$$
+O procedimento acima é chamado de derivação logarítmica. Use-o para derivar as funções abaixo.
+(a) $f(x) = (x + 1)^x$
+(b) $f(x) = (\sen x)^{\cos x}$.
+
+Lista de Exercícios – Semana 07 - Página 1 de 3
+
+
+2. Equações matemáticas em LaTeX:
+
+$$f(x) = \frac{x^2\sqrt[3]{7x - 14}}{(1 + x^2)^4}$$
+$$\ln(f(x)) = 2\ln(x) + \frac{1}{3}\ln(7x - 14) - 4\ln(1 + x^2)$$
+$$\frac{1}{f(x)}f'(x) = \frac{2}{x} + \frac{7/3}{7x - 14} - \frac{8x}{1 + x^2}$$
+$$f'(x) = \frac{x^2\sqrt[3]{7x - 14}}{(1 + x^2)^4}\left(\frac{2}{x} + \frac{7/3}{7x - 14} - \frac{8x}{1 + x^2}\right)$$
+
+Note that the other equations were already provided in LaTeX format in the first section.
+                </article>
+            </main>
+        </body>
+        </html>
+        

@@ -1,0 +1,316 @@
+
+        <!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Texto e Equações - Gemini</title>
+            
+            <!-- MathJax Config -->
+            <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']]
+                },
+                svg: {
+                    fontCache: 'global'
+                }
+            };
+            </script>
+            <script type="text/javascript" id="MathJax-script" async
+                    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+            </script>
+            
+            <style>
+                :root {
+                    --text-color: #333;
+                    --bg-color: #fff;
+                    --secondary-bg: #f8f9fa;
+                }
+                
+                /* Base styles */
+                body {
+                    font-family: system-ui, -apple-system, sans-serif;
+                    line-height: 1.6;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    color: var(--text-color);
+                    background: var(--bg-color);
+                    transition: all 0.3s ease;
+                }
+                
+                /* Content container */
+                .content {
+                    padding: 20px;
+                    background: var(--secondary-bg);
+                    border-radius: 10px;
+                    margin: 20px 0;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                }
+                
+                /* Math display */
+                .math-display {
+                    overflow-x: auto;
+                    padding: 1em;
+                    margin: 1em 0;
+                    background: var(--bg-color);
+                    border-radius: 5px;
+                }
+                
+                /* Dark mode */
+                body.dark-mode {
+                    --text-color: #e0e0e0;
+                    --bg-color: #1a1a1a;
+                    --secondary-bg: #2d2d2d;
+                }
+                
+                /* High contrast */
+                body.high-contrast {
+                    --text-color: #fff;
+                    --bg-color: #000;
+                    --secondary-bg: #222;
+                }
+                
+                /* Accessibility controls */
+                .accessibility-controls {
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    background: var(--secondary-bg);
+                    padding: 15px;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    z-index: 1000;
+                    max-width: 300px;
+                }
+                
+                /* Buttons */
+                button {
+                    padding: 8px 12px;
+                    border: none;
+                    border-radius: 4px;
+                    background: #3498db;
+                    color: white;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    font-size: 14px;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+                
+                button:hover {
+                    background: #2980b9;
+                    transform: translateY(-2px);
+                }
+                
+                button:focus {
+                    outline: 3px solid #74b9ff;
+                    outline-offset: 2px;
+                }
+                
+                /* Responsive design */
+                @media (max-width: 768px) {
+                    .accessibility-controls {
+                        left: 20px;
+                        right: 20px;
+                        max-width: unset;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <main>
+                <h1>Interpretação do Texto</h1>
+                
+                <div class="content" role="region" aria-label="Texto interpretado">
+                    <div id="text-content">
+                        Aqui está a análise da imagem fornecida, incluindo o texto completo, as equações matemáticas em LaTeX e uma verificação das funções trigonométricas:
+
+**1. Texto completo:**
+
+Universidade de Brasília
+Departamento de Matemática
+Cálculo 1
+Lista de Exercícios – Semana 07
+
+Temas abordados: Regra da cadeia; Derivação Implícita; Derivada de funções inversas
+Seções do livro: 3.6, 3.7, 3.8 e 3.9
+
+1) Supondo que y = y(u) e u = u(x), use a regra da cadeia para calcular a derivada dy/dx nos itens abaixo
+(a) y = u² + 1; u = 3x² – 2x
+(b) y = √u; u = 1/(x − 1)
+(c) y = u² + 2u – 3; u = √x
+(d) y = u³ + u; u = 1/√x
+(e) y = cos(u); u = x + x²
+(f) y = sen(u); u = √x
+
+2) Calcule a derivada de cada uma das funções abaixo. (veja Vídeo 3)
+(a) f(x) = cos(x + x²)
+(b) f(x) = e√x ln(√x)
+(c) f(x) = sen((x + 1)²(x + 2))
+(d) f(x) = (3x³ + 4x² - 4)³/⁴
+(e) f(x) = arcsen(2x) (veja Vídeo 2)
+(f) f(x) = √x + √2x
+(g) f(x) = ln(x√x² + 1)
+(h) f(x) = (x³ - 3x²)/((x⁴ + 1)⁵/²)
+(i) f(x) = arctan(3x² + 1)
+(j) f(x) = (eˣ)ˣ
+(k) f(x) = x²e⁻ˣ
+(l) f(x) = arccos(1/(x² + 1))
+
+3) Se f é uma função derivável e positiva, então (ln f(x))' = f'(x)/f(x). Vamos usar este fato para calcular a derivada da função
+f(x) = (x²√⁷ˣ - 14)/((1 + x²)⁴)
+
+Tomando o logaritmo nos dois lados, e lembrando que a função logaritmo transforma produtos em soma e potências em produtos, obtemos
+
+ln(f(x)) = 2ln(x) + (1/3)ln(7x - 14) - 4ln(1 + x²)
+
+Derivando, obtemos
+
+(1/f(x))f'(x) = 2/x + 7/(3(7x - 14)) - 8x/(1 + x²)
+
+e portanto
+
+f'(x) = ((x²√⁷ˣ - 14)/((1 + x²)⁴)) * (2/x + 7/(3(7x - 14)) - 8x/(1 + x²))
+
+O procedimento acima é chamado de derivação logarítmica. Use-o para derivar as funções abaixo.
+(a) f(x) = (x + 1)ˣ
+(b) f(x) = (sen x)ˣ cos x
+
+Lista de Exercícios – Semana 07 - Página 1 de 3
+
+
+**2. Equações matemáticas em LaTeX:**
+
+* **1(a):**  `y = u^2 + 1; u = 3x^2 - 2x`
+* **1(b):**  `y = \sqrt{u}; u = \frac{1}{(x - 1)}`
+* **1(c):**  `y = u^2 + 2u - 3; u = \sqrt{x}`
+* **1(d):**  `y = u^3 + u; u = \frac{1}{\sqrt{x}}`
+* **1(e):**  `y = \cos(u); u = x + x^2`
+* **1(f):**  `y = \sin(u); u = \sqrt{x}`
+* **2(a):**  `f(x) = \cos(x + x^2)`
+* **2(b):**  `f(x) = e^{\sqrt{x}} \ln(\sqrt{x})`
+* **2(c):**  `f(x) = \sin((x + 1)^2(x + 2))`
+* **2(d):**  `f(x) = (3x^3 + 4x^2 - 4)^{3/4}`
+* **2(e):**  `f(x) = \arcsin(2x)`
+* **2(f):**  `f(x) = \sqrt{x} + \sqrt{2x}`
+* **2(g):**  `f(x) = \ln(x\sqrt{x^2 + 1})`
+* **2(h):**  `f(x) = \frac{x^3 - 3x^2}{(x^4 + 1)^{5/2}}`
+* **2(i):**  `f(x) = \arctan(3x^2 + 1)`
+* **2(j):**  `f(x) = (e^x)^x`
+* **2(k):**  `f(x) = x^2 e^{-x}`
+* **2(l):**  `f(x) = \arccos\left(\frac{1}{x^2 + 1}\right)`
+* **3:** `f(x) = \frac{x^2 \sqrt[7]{x} - 14}{(1 + x^2)^4}`
+* **3 (derivada final):** `f'(x) = \frac{x^2 \sqrt[7]{x} - 14}{(1 + x^2)^4} \left( \frac{2}{x} + \frac{7}{3(7x - 14)} - \frac{8x}{1 + x^2} \right)`
+* **3(a):** `f(x) = (x + 1)^x`
+* **3(b):** `f(x) = (\sin x)^x \cos x`
+
+
+**3. Funções trigonométricas:**
+
+As funções trigonométricas `\sin` e `\cos` aparecem nas equações, com a sintaxe LaTeX correta mantida (com espaços depois de `\sin` e `\cos`).  Parênteses e colchetes estão balanceados.  Subscritos e sobrescritos também foram preservados.
+
+
+Espero que isto ajude!
+                    </div>
+                </div>
+                
+                <div class="accessibility-controls" role="complementary">
+                    <button onclick="toggleDarkMode()" aria-label="Alternar modo escuro">
+                        🌓 Modo Escuro</button>
+                    <button onclick="toggleHighContrast()" aria-label="Alternar alto contraste">
+                        👁️ Alto Contraste</button>
+                    <button onclick="toggleSpeech()" aria-label="Ler texto" id="speechButton">
+                        🔊 Ler</button>
+                    <button onclick="increaseFontSize()" aria-label="Aumentar fonte">
+                        A+</button>
+                    <button onclick="decreaseFontSize()" aria-label="Diminuir fonte">
+                        A-</button>
+                </div>
+            </main>
+            
+            <script>
+                let isReading = false;
+                const speechUtterance = new SpeechSynthesisUtterance();
+                speechUtterance.lang = 'pt-BR';
+                
+                // Dark mode toggle
+                function toggleDarkMode() {
+                    document.body.classList.toggle('dark-mode');
+                    document.body.classList.remove('high-contrast');
+                    reloadMathJax();
+                }
+                
+                // High contrast toggle
+                function toggleHighContrast() {
+                    document.body.classList.toggle('high-contrast');
+                    document.body.classList.remove('dark-mode');
+                    reloadMathJax();
+                }
+                
+                // Speech synthesis
+                function toggleSpeech() {
+                    if (isReading) {
+                        window.speechSynthesis.cancel();
+                        isReading = false;
+                        document.getElementById('speechButton').innerHTML = '🔊 Ler';
+                    } else {
+                        const text = document.getElementById('text-content').textContent;
+                        speechUtterance.text = text;
+                        
+                        speechUtterance.onend = function() {
+                            isReading = false;
+                            document.getElementById('speechButton').innerHTML = '🔊 Ler';
+                        };
+                        
+                        window.speechSynthesis.speak(speechUtterance);
+                        isReading = true;
+                        document.getElementById('speechButton').innerHTML = '🔊 Parar';
+                    }
+                }
+                
+                // Font size controls
+                let currentFontSize = parseFloat(getComputedStyle(document.body).fontSize);
+                
+                function increaseFontSize() {
+                    currentFontSize = Math.min(currentFontSize * 1.1, 32);
+                    document.body.style.fontSize = currentFontSize + 'px';
+                    reloadMathJax();
+                }
+                
+                function decreaseFontSize() {
+                    currentFontSize = Math.max(currentFontSize * 0.9, 12);
+                    document.body.style.fontSize = currentFontSize + 'px';
+                    reloadMathJax();
+                }
+                
+                // MathJax reload
+                function reloadMathJax() {
+                    if (typeof MathJax !== 'undefined') {
+                        MathJax.typesetClear();
+                        MathJax.typesetPromise();
+                    }
+                }
+                
+                // Keyboard shortcuts
+                document.addEventListener('keydown', (e) => {
+                    if (e.altKey) {
+                        switch(e.key) {
+                            case 'd': toggleDarkMode(); break;
+                            case 'c': toggleHighContrast(); break;
+                            case 's': toggleSpeech(); break;
+                            case '+': increaseFontSize(); break;
+                            case '-': decreaseFontSize(); break;
+                        }
+                    }
+                });
+            </script>
+        </body>
+        </html>
+        
